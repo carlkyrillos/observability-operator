@@ -50,16 +50,7 @@ func GetPrometheusOperatorgroup(cr *v1.Observability) *coreosv1.OperatorGroup {
 func GetPrometheusSubscription(cr *v1.Observability) *v1alpha1.Subscription {
 	return &v1alpha1.Subscription{
 		ObjectMeta: v12.ObjectMeta{
-			Name:      "prometheus-subscription",
-			Namespace: cr.Namespace,
-		},
-	}
-}
-
-func GetPrometheusCatalogSource(cr *v1.Observability) *v1alpha1.CatalogSource {
-	return &v1alpha1.CatalogSource{
-		ObjectMeta: v12.ObjectMeta{
-			Name:      "prometheus-catalogsource",
+			Name:      "prometheus",
 			Namespace: cr.Namespace,
 		},
 	}
